@@ -1,0 +1,24 @@
+@import "_mixins/font-face";
+
+
+@font-face {
+  font-family: "OpenSansRegulyar";
+  src: url('../fonts/OpenSans/OpenSansRegular.ttf');
+}
+@font-face {
+  font-family: "OpenSansBold";
+  src: url('../fonts/OpenSans/OpenSansBold.ttf');
+}
+@font-face {
+  font-family: "OpenSansSemibold";
+  src: url('../fonts/OpenSans/OpenSansSemibold.ttf');
+}
+@font-face {
+  font-family: "OpenSansExtraBold";
+  src: url('../fonts/OpenSans/OpenSansExtraBold.ttf');
+}
+
+@font-face {
+  font-family: "OpenSansLight";
+  src: url('../fonts/OpenSans/OpenSansLight.ttf');
+}

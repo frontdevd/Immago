@@ -1,0 +1,53 @@
+footer {
+  border-top: 1px solid #DDDDDD;
+  padding: 30px;
+
+  .footer-wrapp {
+    display: flex;
+    justify-content: space-between;
+
+    .footer-item {
+      .logo {
+        margin-top: -13px;
+        > a {
+          color: $blueColor;
+          font-size: 35px;
+          font-weight: 700;
+        }
+        p {
+          font-family: "OpenSansLight";
+          font-size: 12px;
+          color: $blueColor;
+          margin: 23px 0 0;
+        }
+      }
+
+      ul {
+        li {
+          display: inline-block;
+          margin: 0 7px;
+
+          a {
+            font-family: "OpenSansSemibold";
+            font-size: 15px;
+            color: $blueColor;
+          }
+        }
+      }
+
+      select {
+        font-family: OpenSansRegulyar;
+        color: #0f3358;
+        border: 1px solid #ddd;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        font-size: 15px;
+        padding: 6px 51px 6px 35px;
+        outline: 0;
+        appearance: none;
+        background: url(../../img/footer/select.svg) no-repeat right center;
+        background-position-x: 108px;
+      }
+    }
+  }
+}
