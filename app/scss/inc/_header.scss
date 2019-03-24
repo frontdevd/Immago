@@ -7,29 +7,87 @@ header {
     justify-content: space-between;
 
     .logo {
+      margin: -5px 0 0 0;
+
+      @include media-breakpoint-up(sm) {
+        margin: 5px 0 0 0;
+      }
+
       a {
         color: $blueColor;
         font-size: 30px;
         font-weight: bold;
+
+        @include media-breakpoint-up(sm) {
+          font-size: 20px;
+        }
       }
     }
 
     .login-box {
+
+
+      .mobile-menu {
+        display: none;
+
+        button {
+          cursor: pointer;
+          background: $redColor;
+          border: none;
+          color: #fff;
+          padding: 8px 12px;
+
+          i {
+            font-size: 18px;
+          }
+        }
+
+        @include media-breakpoint-up(lg) {
+          display: block;
+        }
+      }
+
       ul {
+        box-sizing: border-box;
+
+        @include media-breakpoint-up(lg) {
+          display: none;
+          position: absolute;
+          top: 80px;
+          left: 0;
+          width: 100%;
+          background: #f7f7f7;
+          padding: 20px;
+          box-shadow: 0 0 15px 0 #e7e0e0;
+        }
+
         li {
           display: inline-block;
           margin-right: 28px;
+
+          @include media-breakpoint-up(md) {
+            display: block;
+            margin-right: 0;
+            text-align: center;
+            margin: 12px 0;
+          }
+
           a {
             color: $blueColor;
             font-size: 18px;
           }
         }
+
         li:nth-child(2) {
           background: $redColor;
           padding: 6px 22.5px;
           margin-right: 0;
           border-radius: 37px;
           color: #fff;
+          @include media-breakpoint-up(md) {
+            width: max-content;
+            margin: 0 auto;
+          }
 
           a {
             color: #fff;
@@ -37,5 +95,68 @@ header {
         }
       }
     }
+  }
+}
+
+
+// cloud animation
+
+.cloud1 {
+  position: absolute;
+  top: 7%;
+  left: 100px;
+  animation: cloud1 10s ease infinite;
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+.cloud2 {
+  position: absolute;
+  top: 8%;
+  right: 23%;
+  animation: cloud2 10s ease infinite;
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+.cloud3 {
+  position: absolute;
+  top: 17%;
+  right: 6%;
+  animation: cloud3 10s ease infinite;
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+
+@keyframes  cloud1{
+  50% {
+    top: 8%;
+    left: 150px;
+  }
+  100% {
+    top: 7%;
+    left: 100px;
+  }
+}
+@keyframes  cloud2 {
+  50% {
+    top: 8%;
+    right: 26%;
+  }
+  100% {
+    top: 8%;
+    right: 23%;
+  }
+}
+@keyframes  cloud3 {
+  50% {
+    top: 15%;
+    right: 8%;
+  }
+  100% {
+    top: 17%;
+    right: 6%;
   }
 }

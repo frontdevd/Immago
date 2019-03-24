@@ -1,8 +1,13 @@
+@import "media";
 
 ::placeholder {
   color: $blueColor;
   font-family: "OpenSansSemibold";
   font-size: 20px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 18px;
+  }
 }
 
 //::selection {
@@ -68,9 +73,18 @@ b, strong {
 
 .content {
   width: 86%;
-  margin: 0px auto;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @include media-breakpoint-up(md) {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+
 }
 .content-full {
   width: 100%;
   display: block;
+  box-sizing: border-box;
 }

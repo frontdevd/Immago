@@ -1,9 +1,16 @@
+@import "../media";
+
 section.home-background {
   background-image: url(../../img/header/bg.png);
   height: 100vh;
   background-position: bottom;
   background-size: contain;
   background-repeat: no-repeat;
+
+  @include media-breakpoint-up(md) {
+    background-position: inherit;
+    background-size: cover;
+  }
 
   //header
   @import "../inc/header";
@@ -14,18 +21,37 @@ section.home-background {
     //margin-top: 330px;
     position: relative;
     top: 32%;
+    @include media-breakpoint-up(1600) {
+      top: 29%;
+    }
 
     h1 {
       color: $blueColor;
       font-size: 45px;
       text-align: center;
       font-family: "OpenSansBold";
+
+      @include media-breakpoint-up(md) {
+        font-size: 32px;
+      }
+      @include media-breakpoint-up(sm) {
+        font-size: 24px;
+      }
+
+
     }
 
     form {
       width: 1078px;
-
       margin: 65px auto;
+
+      @include media-breakpoint-up(lg) {
+        width: 100%;
+      }
+      @include media-breakpoint-up(md) {
+        margin: 30px auto;
+      }
+
 
       .form-group {
         position: relative;
@@ -40,6 +66,15 @@ section.home-background {
           font-family: "OpenSansSemibold";
           font-size: 20px;
           box-sizing: border-box;
+
+          @include media-breakpoint-up(1600) {
+            padding: 18px 30px;
+          }
+          @include media-breakpoint-up(md) {
+            padding: 16px 30px;
+            font-size: 18px;
+          }
+
         }
 
         button {
@@ -53,10 +88,20 @@ section.home-background {
           border-top-right-radius: 50px;
           border-bottom-right-radius: 50px;
           outline: none;
+          @include media-breakpoint-up(1600) {
+            width: 80px;
+          }
+
 
           img {
+
             width: 30px;
             height: 30px;
+
+            @include media-breakpoint-up(1600) {
+              width: 20px;
+              height: 20px;
+            }
           }
         }
       }
@@ -76,12 +121,21 @@ section.available {
     font-family: 'OpenSansBold';
     margin-bottom: 57px;
     width: fit-content;
+
+    @include media-breakpoint-up(md) {
+      font-size: 32px;
+    }
+    @include media-breakpoint-up(sm) {
+      font-size: 24px;
+    }
+
+
   }
 
 
   .slider-wrapp {
     .slider-item {
-      padding:6px;
+      padding: 6px;
 
       figure {
         position: relative;
@@ -120,6 +174,10 @@ section.available {
         padding: 20px 24px;
         box-shadow: 0 0 15px 0 #e7e0e0;
 
+        @include media-breakpoint-up(sm) {
+          padding: 14px;
+        }
+
         > img {
           margin-bottom: 22px;
           width: auto;
@@ -138,10 +196,15 @@ section.available {
           display: flex;
           justify-content: space-between;
 
+          @include media-breakpoint-up(sm) {
+            flex-direction: column;
+          }
+
 
           p {
             font-family: 'OpenSansRegulyar';
             color: #A7A7A7;
+            margin: 4px 0;
 
             img {
               width: auto;
@@ -166,8 +229,14 @@ section.available {
 
         .fr {
           border-bottom: 1px solid #A7A7A7;
-          margin: 0px 0 20px;
+          margin: 0 0 20px;
           padding-bottom: 20px;
+
+          @include media-breakpoint-up(sm) {
+            margin: 0 0 14px;
+            padding-bottom: 8px;
+          }
+
         }
 
       }
@@ -180,6 +249,9 @@ section.available {
       position: absolute;
       top: -24%;
       right: 0;
+      @include media-breakpoint-up(md) {
+        position: relative;
+      }
 
       button.owl-prev, button.owl-next {
         background: #D8D8D8 !important;
@@ -188,9 +260,18 @@ section.available {
         border-radius: 50% !important;
         cursor: pointer;
 
+        @include media-breakpoint-up(md) {
+          width: 40px;
+          height: 40px;
+        }
+
         img {
           height: 100%;
-          width: 30px
+          width: 30px;
+
+          @include media-breakpoint-up(md) {
+            width: 20px;
+          }
         }
       }
     }
@@ -200,10 +281,20 @@ section.available {
 
 section.discover {
   margin-top: 255px;
-  margin-bottom: 117px;
+  //margin-bottom: 117px;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 70px;
+    //margin-bottom: 70px;
+  }
 
   .title {
     margin-bottom: 255px;
+    position: relative;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 100px;
+    }
 
     h1 {
       color: $blueColor;
@@ -211,6 +302,18 @@ section.discover {
       text-align: center;
       font-family: 'OpenSansBold';
       margin-bottom: 66px;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 48px;
+        margin-bottom: 30px;
+      }
+
+      @include media-breakpoint-up(md) {
+        font-size: 32px;
+      }
+      @include media-breakpoint-up(sm) {
+        font-size: 24px;
+      }
     }
 
     p {
@@ -218,46 +321,59 @@ section.discover {
       color: $blueColor;
       font-size: 26px;
       text-align: center;
+      @include media-breakpoint-up(sm) {
+        font-size: 20px;
+      }
     }
   }
 
   .discover-wrapp {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    //align-items: center;
+    @include media-breakpoint-up(md) {
+      flex-direction: column;
+    }
+
 
     .dis-box {
       flex-basis: 46%;
-    }
-
-    .dis-box.left {
-
-      //position: relative;
-
-      .left-box {
-        //background-image: url(../../img/home/discover/test.jpg);
-        //background-repeat: no-repeat;
-        //height: 470px;
-        //width: 714px;
-        //background-position: left;
-        //position: inherit;
-      }
-
-
-      img {
-        //position: absolute;
-        //top: -126px;
-        //right: 37px;
-        //width: 340px;
+      @include media-breakpoint-up(md) {
+        padding: 20px;
       }
     }
 
-    .right {
+    .dis-box.right {
+      color: $blueColor;
+      font-size: 40px;
+      text-align: left;
+      font-family: 'OpenSansBold';
+      padding-top: 100px;
+      padding-right: 20px;
+      background-image: url(../../img/home/discover/search-bg.png);
+      background-repeat: no-repeat;
+      background-position: bottom left;
+
+
+      @include media-breakpoint-up(md) {
+        text-align: center;
+      }
+      @include media-breakpoint-up(lg) {
+        background-image: unset;
+      }
+      @include media-breakpoint-up(1500) {
+        padding-top: 0;
+        //background-image: unset;
+      }
+
       h4 {
-        color: $blueColor;
-        font-size: 40px;
-        text-align: left;
-        font-family: 'OpenSansBold';
+
+        @include media-breakpoint-up(lg) {
+          font-size: 32px;
+        }
+        @include media-breakpoint-up(md) {
+          font-size: 24px;
+        }
       }
 
       p {
@@ -267,31 +383,85 @@ section.discover {
         text-align: left;
         width: 78%;
         margin: 20px 0;
+
+        @include media-breakpoint-up(1500) {
+          width: 100%;
+        }
       }
 
       ul {
         margin-top: 57px;
+        @include media-breakpoint-up(lg) {
+          margin-top: 24px;
+        }
 
         li {
           display: inline-block;
+
+          img {
+            @include media-breakpoint-up(md) {
+              width: 120px;
+            }
+
+          }
 
         }
       }
     }
   }
+
+
+
+  .cloud4 {
+    position: absolute;
+    left: 170px;
+    top: 40px;
+    animation: cloud4 10s ease infinite;
+
+    @include media-breakpoint-up(md) {
+     display: none;
+    }
+
+  }
+
+  @keyframes  cloud4 {
+    50% {
+      left: 100px;
+      top: 60px;
+    }
+    100% {
+      left: 170px;
+      top: 40px;
+    }
+  }
 }
+//stroke-dasharray: 1200;
+//stroke-dashoffset: 1200;
+//stroke-width:5;
+//animation:summerbird-s .75s linear forwards .5s;
+
+
 
 section.partners {
   background-image: url(../../img/home/partners/circle.svg);
   background-repeat: no-repeat;
   background-position: -256px center;
   padding: 200px 0;
-
+  @include media-breakpoint-up(md) {
+    background-image: unset;
+    padding: 70px 0;
+  }
   h1 {
     color: $blueColor;
     font-size: 40px;
     text-align: left;
     font-family: 'OpenSansBold';
+    @include media-breakpoint-up(md) {
+      font-size: 32px;
+    }
+    @include media-breakpoint-up(sm) {
+      font-size: 24px;
+    }
   }
 
   p {
@@ -300,11 +470,32 @@ section.partners {
     font-size: 20px;
     text-align: left;
     margin: 20px 0 125px;
+    @include media-breakpoint-up(md) {
+      margin: 20px 0 50px;
+    }
+
+
   }
 
   .partner-wrapp {
     display: flex;
     justify-content: space-between;
+    @include media-breakpoint-up(md) {
+      flex-direction: column;
+    }
+
+    .partner-item {
+      flex-basis: 18%;
+      text-align: center;
+      @include media-breakpoint-up(md) {
+        margin: 10px 0;
+      }
+      @include media-breakpoint-up(xs) {
+        width: 150px;
+        margin: 10px auto;
+
+      }
+    }
   }
 }
 
