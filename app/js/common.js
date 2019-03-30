@@ -46,4 +46,10 @@ $(function() {
     })
 
 
+//    user dropdown toggle
+
+    $('.user-drop').on('click', function () {
+        $('.user-drop-wrapp').toggle()
+    })
+
 });

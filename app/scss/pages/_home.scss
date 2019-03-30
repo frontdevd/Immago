@@ -220,6 +220,14 @@ section.available {
             margin-right: 0;
             border-radius: 37px;
             color: #fff;
+            transition: all 0.4s ease-in-out;
+            cursor: pointer;
+            &:hover {
+              border: 1px solid $redColor;
+              color: $redColor;
+              background: #fff;
+            }
+
           }
 
           .rent {

@@ -1,0 +1,240 @@
+section.register {
+  height: 100vh;
+
+  .register-wrapp {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-breakpoint-up(md) {
+      flex-direction: column;
+    }
+
+
+    .register-left {
+      flex-basis: 50%;
+      position: relative;
+
+      .cloud1 {
+        position: absolute;
+        top: 40px;
+        left: 55px;
+        animation: reg-cloud1 8s ease infinite;
+        @include media-breakpoint-up(md) {
+          display: none;
+        }
+
+        @keyframes reg-cloud1 {
+          0% {
+            top: 40px;
+            left: 55px;
+          }
+          50% {
+            top: 60px;
+            left: 45px;
+          }
+          100% {
+            top: 40px;
+            left: 55px;
+          }
+        }
+
+        img {
+          width: 90px;
+        }
+
+      }
+
+      .cloud2 {
+        position: absolute;
+        top: 38%;
+        right: 20px;
+        animation: reg-cloud2 7s ease infinite;
+        @include media-breakpoint-up(md) {
+          display: none;
+        }
+      }
+
+      .img-bg-register {
+        position: relative;
+        top: 22%;
+        left: -10%;
+        @include media-breakpoint-up(md) {
+          left: 0;
+        }
+
+        > img {
+          width: 700px;
+        }
+
+      }
+
+      @keyframes reg-cloud2 {
+        50% {
+          top: 38%;
+          right: 30px;
+        }
+        100% {
+          top: 38%;
+          right: 20px;
+        }
+      }
+    }
+
+    .register-right {
+      flex-basis: 50%;
+      padding: 70px 20px 30px;
+      @include media-breakpoint-up(sm) {
+        padding: 70px 10px 30px;
+      }
+
+      .log-title {
+        h1 {
+          color: $blueColor;
+          font-size: 40px;
+          text-align: left;
+          font-family: 'OpenSansBold';
+          @include media-breakpoint-up(md) {
+            text-align: center;
+            font-size: 32px;
+          }
+
+          @include media-breakpoint-up(sm) {
+            font-size: 24px;
+          }
+        }
+
+        p {
+          font-family: 'OpenSansLight';
+          font-size: 20px;
+          color: $blueColor;
+          margin: 12px 0 60px;
+          @include media-breakpoint-up(md) {
+            text-align: center;
+            font-size: 18px;
+          }
+        }
+      }
+
+      form.register {
+        width: 600px;
+        @include media-breakpoint-up(md) {
+          width: 100%;
+        }
+
+
+        .input-box {
+          margin: 18px 0;
+
+          input.lg-forms {
+            width: 100%;
+            background: #fbfbfb;
+            border: none;
+            border-radius: 34px;
+            font-size: 20px;
+            color: #959595;
+            padding: 19px 30px;
+            box-sizing: border-box;
+            height: 60px;
+
+            @include media-breakpoint-up(md) {
+              font-size: 18px;
+              padding: 10px 22px;
+            }
+
+          }
+
+          button {
+            font-family: 'OpenSansBold';
+            background: $redColor;
+            margin-right: 0;
+            border-radius: 37px;
+            color: #fff;
+            width: 100%;
+            border: 0;
+            padding: 19px 30px;
+            font-size: 20px;
+            text-transform: uppercase;
+            height: 60px;
+            transition: all 0.4s ease-in-out;
+
+            &:hover {
+              border: 1px solid $redColor;
+              color: $redColor;
+              background: #fff;
+            }
+
+            @include media-breakpoint-up(md) {
+              font-size: 18px;
+              padding: 10px 22px;
+            }
+          }
+        }
+
+        .or-box {
+          margin: 50px 0px;
+
+          .border {
+            width: 130px;
+            border-bottom: 1px solid #979797;
+            margin: 0 auto;
+            position: relative;
+
+            span {
+              position: absolute;
+              background: #ffff;
+              top: -17px;
+              left: 36px;
+              width: 55px;
+              text-align: center;
+              font-size: 20px;
+              color: #979797;
+            }
+
+          }
+        }
+
+        .social-register {
+          ul {
+            margin: 39px 0 40px;
+            display: flex;
+            justify-content: center;
+
+            li {
+              margin: 0 30px;
+            }
+          }
+
+          p {
+            font-family: 'OpenSansBold';
+            font-size: 16px;
+            color: $blueColor;
+            @include media-breakpoint-up(md) {
+              text-align: center;
+            }
+
+            a {
+              text-transform: uppercase;
+              font-family: 'OpenSansBold';
+              font-size: 16px;
+              color: $blueColor;
+              text-decoration: underline;
+              text-underline-position: under;
+              margin-left: 10px;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+::placeholder {
+  color: #959595;
+  font-family: "OpenSansRegulyar";
+  font-size: 20px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 18px;
+  }
+}

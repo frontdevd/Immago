@@ -47,7 +47,7 @@ header {
         }
       }
 
-      ul {
+      ul.login-list {
         box-sizing: border-box;
 
         @include media-breakpoint-up(lg) {
@@ -84,6 +84,9 @@ header {
           margin-right: 0;
           border-radius: 37px;
           color: #fff;
+          transition: all 0.4s ease-in-out;
+
+
           @include media-breakpoint-up(md) {
             width: max-content;
             margin: 0 auto;
@@ -91,6 +94,14 @@ header {
 
           a {
             color: #fff;
+          }
+          &:hover {
+            border: 1px solid $redColor;
+            color: $redColor;
+            background: #fff;
+          }
+          &:hover a{
+            color: $redColor;
           }
         }
       }
@@ -105,7 +116,7 @@ header {
   position: absolute;
   top: 7%;
   left: 100px;
-  animation: cloud1 10s ease infinite;
+  animation: cloud1 20s ease infinite;
   @include media-breakpoint-up(md) {
     display: none;
   }
@@ -114,7 +125,7 @@ header {
   position: absolute;
   top: 8%;
   right: 23%;
-  animation: cloud2 10s ease infinite;
+  animation: cloud2 20s ease infinite;
   @include media-breakpoint-up(md) {
     display: none;
   }
@@ -123,7 +134,7 @@ header {
   position: absolute;
   top: 17%;
   right: 6%;
-  animation: cloud3 10s ease infinite;
+  animation: cloud3 20s ease infinite;
   @include media-breakpoint-up(md) {
     display: none;
   }
