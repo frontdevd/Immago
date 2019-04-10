@@ -1,0 +1,240 @@
+section.activate-premium {
+  .bg-img {
+    background-image: url(../../img/activate-premium/bg.png);
+    height: 550px;
+    background-size: cover;
+    background-position: center right;
+    @include media-breakpoint-up(1600) {
+      background-position: inherit;
+    }
+
+
+    .title {
+      position: absolute;
+      top: 11%;
+      @include media-breakpoint-up(md) {
+        position: unset;
+        padding: 50px 0px;
+        box-sizing: border-box;
+        width: 100%;
+      }
+
+      h1 {
+        font-family: 'OpenSansSemibold';
+        font-size: 55px;
+        color: $redColor;
+        margin-bottom: 14px;
+
+        @include media-breakpoint-up(md) {
+          font-size: 26px;
+          text-align: center;
+        }
+      }
+
+      p {
+        font-size: 25px;
+        color: $blueColor;
+        @include media-breakpoint-up(md) {
+          font-size: 20px;
+          text-align: center;
+        }
+
+        span {
+          font-family: 'OpenSansSemibold';
+          color: $redColor;
+
+          img {
+            margin: 0 10px;
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .plans {
+    margin: 120px 0 170px;
+    @include media-breakpoint-up(md) {
+      margin: 20px 0 50px;
+    }
+
+    .title {
+      h1 {
+        font-family: 'OpenSansSemibold';
+        text-align: center;
+        color: $blueColor;
+        font-size: 40px;
+        margin-bottom: 114px;
+
+        @include media-breakpoint-up(md) {
+          font-size: 26px;
+        }
+      }
+    }
+
+    .plans-wrapp {
+      display: flex;
+      justify-content: space-between;
+      width: 84%;
+      margin: 0 auto;
+      @include media-breakpoint-up(1600) {
+        width: 100%;
+      }
+      @include media-breakpoint-up(md) {
+        flex-direction: column;
+      }
+
+
+      .plan-box {
+        border: none;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 0 15px 0 #e7e0e0;
+        color: $blueColor;
+        font-family: 'OpenSansSemibold';
+        box-sizing: border-box;
+        flex-basis: 32%;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        @include media-breakpoint-up(md) {
+          margin: 50px;
+          padding: 12px;
+
+        }
+        @include media-breakpoint-up(sm) {
+          margin: 20px 0px;
+        }
+
+        h2 {
+          font-family: OpenSansSemibold;
+          font-size: 30px;
+          color: $redColor;
+        }
+
+        p.price {
+          font-size: 63px;
+          margin: 23px 0 0px;
+          font-weight: bold;
+        }
+
+        sup {
+          font-size: 31px;
+          position: relative;
+          top: -30px;
+          left: -5px;
+        }
+
+        .plan-img {
+          img {
+            width: 95px;
+            margin: 43px 0 30px;
+          }
+        }
+
+        ul {
+          text-align: left;
+
+          p.lf {
+            flex-basis: 13%;
+          }
+
+          p.rg {
+            flex-basis: 85%;
+          }
+
+          li {
+            display: flex;
+
+            p {
+              img {
+                width: 20px;
+                position: relative;
+                top: 5px;
+              }
+            }
+
+          }
+        }
+
+        button {
+          font-family: 'OpenSansSemibold';
+          border: 1px solid $redColor;
+          background: #fff;
+          margin-right: 0;
+          border-radius: 37px;
+          color: $redColor;
+          transition: all .4s ease-in-out;
+          padding: 12px 30px;
+          font-size: 18px;
+          margin-top: 74px;
+          margin-bottom: 30px;
+
+          &:hover {
+            background: $redColor;
+            color: #fff;
+          }
+        }
+
+        &:hover {
+          background: #dfd8d724;
+        }
+
+        &:hover button {
+          background: $redColor;
+          color: #fff;
+        }
+      }
+
+      .plan-box.red {
+        background: $redColor;
+        color: #FFFFFF;
+
+        button {
+
+          &:hover {
+            border: 1px solid #fff;
+            color: #fff;
+          }
+        }
+
+        &:hover button {
+          border: 1px solid #fff;
+        }
+      }
+
+    }
+  }
+
+  .question {
+    text-align: center;
+    margin: 0 0 200px 0;
+
+    h3 {
+      font-family: 'OpenSansSemibold';
+      color: $blueColor;
+      font-size: 40px;
+      margin-bottom: 20px;
+
+      @include media-breakpoint-up(md) {
+        font-size: 26px;
+      }
+    }
+
+    p {
+      font-family: 'OpenSansLight';
+      font-size: 26px;
+      color: $blueColor;
+      width: 70%;
+      margin: 0 auto;
+      @include media-breakpoint-up(md) {
+        width: 100%;
+        font-size: 18px;
+      }
+
+      span {
+        font-family: 'OpenSansSemibold';
+      }
+    }
+  }
+}

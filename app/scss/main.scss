@@ -14,16 +14,20 @@
 // include styles
 @import "globar";
 
-
+// include pages
 @import "pages/home";
 @import "pages/register";
 @import "pages/login";
 @import "pages/after_login";
 @import "pages/change_password";
 @import "pages/profile";
+@import "pages/profile_premium";
+@import "pages/edit";
+@import "pages/search-result";
+@import "pages/myfavorite";
+@import "pages/activate_premium";
+@import "pages/saved_searches";
+@import "pages/payment";
 
-
-
-
-
+// include media
 @import "media";

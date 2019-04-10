@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Search</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="icon" href="img/favicon/favicon.png">
+    <link rel="apple-touch-icon" sizes="32x32" href="img/favicon/favicon.png">
+    <meta name="theme-color" content="#000">
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+<main class="homepage">
+    <!--header-->
+    <header>
+        <div class="content">
+            <nav>
+                <div class="logo">
+                    <a href="/">
+                        <img src="img/header/logo.svg" alt="logo"> Immago
+                    </a>
+                </div>
+                <div class="login-box">
+                    <div class="mobile-menu">
+                        <button><i class="fa fa-bars"></i></button>
+                    </div>
+                    <ul class="login-list">
+                        <li><a href="">Sign In</a></li>
+                        <li><a href="">Sign Up</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--profile section-->
+    <section class="search-result">
+        <div class="content-full">
+            <div class="content">
+                <div class="search-result-wrapp">
+                    <div class="search-box">
+                        <input type="text" name="search" placeholder="Search" value="">
+                        <div class="search-result-list">
+                            <ul>
+                                <li>Bremen Germany</li>
+                                <li>Bremen Germany</li>
+                                <li>Bremen Germany</li>
+                                <li>Bremen Germany</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filter-wrapp">
+                        <div class="filter-box">
+                            <p>What</p>
+                            <select name="" id="">
+                                <option value="Rent">Rent</option>
+                                <option value="Rent">Rent</option>
+                                <option value="Rent">Rent</option>
+                                <option value="Rent">Rent</option>
+                            </select>
+                        </div>
+                        <div class="filter-box">
+                            <p>Number of Rooms</p>
+                            <div class="input-filter">
+                                <input type="number" placeholder="From">
+                                <input type="number" placeholder="To">
+                            </div>
+                        </div>
+                        <div class="filter-box">
+                            <p>Living space (m²)</p>
+                            <div class="input-filter">
+                                <input type="number" placeholder="From">
+                                <input type="number" placeholder="To">
+                            </div>
+                        </div>
+                        <div class="filter-box">
+                            <p>Rental Price($)</p>
+                            <div class="input-filter">
+                                <input type="number" placeholder="From">
+                                <input type="number" placeholder="To">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="save-search">
+                        <button>Save Search</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="search-result-product">
+                    <div class="search-product-box">
+                        <p>Search result (45)</p>
+                    </div>
+                    <div class="search-product-box sorting">
+                        <div class="sort-box">
+                            <h6 for="sort">Sort by </h6>
+                        </div>
+                        <div class="sort-box"></div>
+
+                        <ul class="select-list">
+                            <p value="" class="active">Default</p>
+                            <div class="hidden-select">
+                                <p value="">Newest</p>
+                                <p value="">Lowest Price</p>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="products closed">
+                    <div class="product-wrapp">
+                        <div class="product-box-lf">
+                            <img src="img/search_result/prod1.png" alt="prod">
+                        </div>
+                        <div class="product-box-rg">
+                            <div class="product-box-wr-full">
+                                <div class="pr-box">
+                                    <img src="/img/home/partners/partner3.png" alt="partner">
+                                </div>
+                            </div>
+                            <div class="product-box-wr">
+                                <div class="pr-box">
+                                    <h2>Modern house in Hamburg, Germany</h2>
+                                </div>
+                                <div class="pr-box rg">
+                                    <button class="price">$ 4587</button>
+                                </div>
+                            </div>
+                            <div class="product-box-wr">
+                                <div class="pr-box">
+                                    <p><img src="img/home/slider/location.svg" alt="location">Lemsahl-Mellingstedt</p>
+                                </div>
+                                <div class="pr-box rg">
+                                    <button class="fav">
+                                        <svg id="like" xmlns="http://www.w3.org/2000/svg" width="18" height="20.101" viewBox="0 0 22.753 20.101">
+                                            <g id="Group_10" data-name="Group 10" transform="translate(0 0)">
+                                                <path id="fav_like" data-name="Path 12" d="M21.093,31.811a5.731,5.731,0,0,0-9.15.658,8.724,8.724,0,0,0-.566.918,8.716,8.716,0,0,0-.566-.918,5.731,5.731,0,0,0-9.15-.658A6.9,6.9,0,0,0,0,36.391a8.446,8.446,0,0,0,2.326,5.542,51.787,51.787,0,0,0,5.822,5.439c.88.75,1.791,1.526,2.76,2.374l.029.026a.667.667,0,0,0,.878,0l.029-.026c.969-.848,1.88-1.624,2.76-2.374a51.779,51.779,0,0,0,5.822-5.439,8.446,8.446,0,0,0,2.326-5.542A6.9,6.9,0,0,0,21.093,31.811ZM13.74,46.358c-.759.647-1.54,1.312-2.364,2.028-.824-.716-1.6-1.382-2.364-2.029-4.624-3.941-7.679-6.544-7.679-9.966a5.566,5.566,0,0,1,1.327-3.7,4.45,4.45,0,0,1,3.384-1.523A4.494,4.494,0,0,1,9.722,33.24a7.9,7.9,0,0,1,1.02,2.029.667.667,0,0,0,1.268,0,7.9,7.9,0,0,1,1.02-2.029,4.4,4.4,0,0,1,7.062-.548,5.566,5.566,0,0,1,1.327,3.7C21.42,39.814,18.365,42.417,13.74,46.358Z" transform="translate(0 -29.836)" fill="#0f3358"/>
+                                            </g>
+                                        </svg>
+                                        Add to Favorites
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div class="product-box-wr last-mrg">
+                                <div class="pr-box">
+                                    <p><img src="img/home/slider/bed.svg" alt="bed">rooms</p>
+                                </div>
+                                <div class="pr-box">
+                                    <p><img src="img/home/slider/house.svg" alt="location">316 m²</p>
+                                </div>
+                                <div class="pr-box rg">
+                                    <button class="preview">Preview</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description-wrapp ">
+                        <div class="desc-box">
+                            <h4>DESCRIPTION</h4>
+                            <p>This spacious, sunlit semi-detached house was built in 2003 in conventional construction
+                                and
+                                is in a very clean condition. The living area of ​​approx. 156 m² is distributed
+                                over a living area, hallway and eat-in kitchen on the ground floor, three living /
+                                sleeping
+                                areas in the first floor. </p>
+
+                        </div>
+                        <div class="desc-box">
+                            <h4>DOMESTIC EQUIPMENTS</h4>
+
+                            <div class="domestic">
+                                <ul>
+                                    <li><p>Ktchen: fitted kitchen (EBK)</p></li>
+                                    <li><p>Garden / anteil / joint</p></li>
+                                </ul>
+                                <ul>
+                                    <li><p>Floors: parquet</p></li>
+                                    <li><p>Garage: Carport</p></li>
+                                </ul>
+                            </div>
+                            <div class="tags">
+                                <ul>
+                                    <li><a href="">parking space</a></li>
+                                    <li><a href="">balcony</a></li>
+                                    <li><a href="">bathroom with tub</a></li>
+                                    <li><a href="">guest toilet</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="gallery">
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery1.png" alt="">
+                                </div>
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery2.png" alt="">
+                                </div>
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery3.png" alt="">
+                                </div>
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery4.png" alt="">
+                                </div>
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery5.png" alt="">
+                                </div>
+                                <div class="gallery-box map">
+                                    <img src="img/search_result/gallery6.png" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="products closed">
+                    <div class="product-wrapp">
+                        <div class="product-box-lf">
+                            <img src="img/search_result/prod2.png" alt="prod">
+                        </div>
+                        <div class="product-box-rg">
+                            <div class="product-box-wr-full">
+                                <div class="pr-box">
+                                    <img src="/img/home/partners/partner3.png" alt="partner">
+                                </div>
+                            </div>
+                            <div class="product-box-wr">
+                                <div class="pr-box">
+                                    <h2>Modern house in Hamburg, Germany</h2>
+                                </div>
+                                <div class="pr-box rg">
+                                    <button class="price">$ 4587</button>
+                                </div>
+                            </div>
+                            <div class="product-box-wr">
+                                <div class="pr-box">
+                                    <p><img src="img/home/slider/location.svg" alt="location">Lemsahl-Mellingstedt</p>
+                                </div>
+                                <div class="pr-box rg">
+                                    <button class="fav">
+                                        <svg id="like" xmlns="http://www.w3.org/2000/svg" width="18" height="20.101" viewBox="0 0 22.753 20.101">
+                                            <g id="Group_10" data-name="Group 10" transform="translate(0 0)">
+                                                <path id="fav_like" data-name="Path 12" d="M21.093,31.811a5.731,5.731,0,0,0-9.15.658,8.724,8.724,0,0,0-.566.918,8.716,8.716,0,0,0-.566-.918,5.731,5.731,0,0,0-9.15-.658A6.9,6.9,0,0,0,0,36.391a8.446,8.446,0,0,0,2.326,5.542,51.787,51.787,0,0,0,5.822,5.439c.88.75,1.791,1.526,2.76,2.374l.029.026a.667.667,0,0,0,.878,0l.029-.026c.969-.848,1.88-1.624,2.76-2.374a51.779,51.779,0,0,0,5.822-5.439,8.446,8.446,0,0,0,2.326-5.542A6.9,6.9,0,0,0,21.093,31.811ZM13.74,46.358c-.759.647-1.54,1.312-2.364,2.028-.824-.716-1.6-1.382-2.364-2.029-4.624-3.941-7.679-6.544-7.679-9.966a5.566,5.566,0,0,1,1.327-3.7,4.45,4.45,0,0,1,3.384-1.523A4.494,4.494,0,0,1,9.722,33.24a7.9,7.9,0,0,1,1.02,2.029.667.667,0,0,0,1.268,0,7.9,7.9,0,0,1,1.02-2.029,4.4,4.4,0,0,1,7.062-.548,5.566,5.566,0,0,1,1.327,3.7C21.42,39.814,18.365,42.417,13.74,46.358Z" transform="translate(0 -29.836)" fill="#0f3358"/>
+                                            </g>
+                                        </svg>
+                                        Add to Favorites
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div class="product-box-wr last-mrg">
+                                <div class="pr-box">
+                                    <p><img src="img/home/slider/bed.svg" alt="bed">rooms</p>
+                                </div>
+                                <div class="pr-box">
+                                    <p><img src="img/home/slider/house.svg" alt="location">316 m²</p>
+                                </div>
+                                <div class="pr-box rg">
+                                    <button class="preview">Preview</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description-wrapp ">
+                        <div class="desc-box">
+                            <h4>DESCRIPTION</h4>
+                            <p>This spacious, sunlit semi-detached house was built in 2003 in conventional construction
+                                and
+                                is in a very clean condition. The living area of ​​approx. 156 m² is distributed
+                                over a living area, hallway and eat-in kitchen on the ground floor, three living /
+                                sleeping
+                                areas in the first floor. </p>
+
+                        </div>
+                        <div class="desc-box">
+                            <h4>DOMESTIC EQUIPMENTS</h4>
+
+                            <div class="domestic">
+                                <ul>
+                                    <li><p>Ktchen: fitted kitchen (EBK)</p></li>
+                                    <li><p>Garden / anteil / joint</p></li>
+                                </ul>
+                                <ul>
+                                    <li><p>Floors: parquet</p></li>
+                                    <li><p>Garage: Carport</p></li>
+                                </ul>
+                            </div>
+                            <div class="tags">
+                                <ul>
+                                    <li><a href="">parking space</a></li>
+                                    <li><a href="">balcony</a></li>
+                                    <li><a href="">bathroom with tub</a></li>
+                                    <li><a href="">guest toilet</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="gallery">
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery1.png" alt="">
+                                </div>
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery2.png" alt="">
+                                </div>
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery3.png" alt="">
+                                </div>
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery4.png" alt="">
+                                </div>
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery5.png" alt="">
+                                </div>
+                                <div class="gallery-box map">
+                                    <img src="img/search_result/gallery6.png" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="products closed">
+                    <div class="product-wrapp">
+                        <div class="product-box-lf">
+                            <img src="img/search_result/prod3.png" alt="prod">
+                        </div>
+                        <div class="product-box-rg">
+                            <div class="product-box-wr-full">
+                                <div class="pr-box">
+                                    <img src="/img/home/partners/partner3.png" alt="partner">
+                                </div>
+                            </div>
+                            <div class="product-box-wr">
+                                <div class="pr-box">
+                                    <h2>Modern house in Hamburg, Germany</h2>
+                                </div>
+                                <div class="pr-box rg">
+                                    <button class="price">$ 4587</button>
+                                </div>
+                            </div>
+                            <div class="product-box-wr">
+                                <div class="pr-box">
+                                    <p><img src="img/home/slider/location.svg" alt="location">Lemsahl-Mellingstedt</p>
+                                </div>
+                                <div class="pr-box rg">
+                                    <button class="fav">
+                                        <svg id="like" xmlns="http://www.w3.org/2000/svg" width="18" height="20.101" viewBox="0 0 22.753 20.101">
+                                            <g id="Group_10" data-name="Group 10" transform="translate(0 0)">
+                                                <path id="fav_like" data-name="Path 12" d="M21.093,31.811a5.731,5.731,0,0,0-9.15.658,8.724,8.724,0,0,0-.566.918,8.716,8.716,0,0,0-.566-.918,5.731,5.731,0,0,0-9.15-.658A6.9,6.9,0,0,0,0,36.391a8.446,8.446,0,0,0,2.326,5.542,51.787,51.787,0,0,0,5.822,5.439c.88.75,1.791,1.526,2.76,2.374l.029.026a.667.667,0,0,0,.878,0l.029-.026c.969-.848,1.88-1.624,2.76-2.374a51.779,51.779,0,0,0,5.822-5.439,8.446,8.446,0,0,0,2.326-5.542A6.9,6.9,0,0,0,21.093,31.811ZM13.74,46.358c-.759.647-1.54,1.312-2.364,2.028-.824-.716-1.6-1.382-2.364-2.029-4.624-3.941-7.679-6.544-7.679-9.966a5.566,5.566,0,0,1,1.327-3.7,4.45,4.45,0,0,1,3.384-1.523A4.494,4.494,0,0,1,9.722,33.24a7.9,7.9,0,0,1,1.02,2.029.667.667,0,0,0,1.268,0,7.9,7.9,0,0,1,1.02-2.029,4.4,4.4,0,0,1,7.062-.548,5.566,5.566,0,0,1,1.327,3.7C21.42,39.814,18.365,42.417,13.74,46.358Z" transform="translate(0 -29.836)" fill="#0f3358"/>
+                                            </g>
+                                        </svg>
+                                        Add to Favorites
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div class="product-box-wr last-mrg">
+                                <div class="pr-box">
+                                    <p><img src="img/home/slider/bed.svg" alt="bed">rooms</p>
+                                </div>
+                                <div class="pr-box">
+                                    <p><img src="img/home/slider/house.svg" alt="location">316 m²</p>
+                                </div>
+                                <div class="pr-box rg">
+                                    <button class="preview">Preview</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description-wrapp ">
+                        <div class="desc-box">
+                            <h4>DESCRIPTION</h4>
+                            <p>This spacious, sunlit semi-detached house was built in 2003 in conventional construction
+                                and
+                                is in a very clean condition. The living area of ​​approx. 156 m² is distributed
+                                over a living area, hallway and eat-in kitchen on the ground floor, three living /
+                                sleeping
+                                areas in the first floor. </p>
+
+                        </div>
+                        <div class="desc-box">
+                            <h4>DOMESTIC EQUIPMENTS</h4>
+
+                            <div class="domestic">
+                                <ul>
+                                    <li><p>Ktchen: fitted kitchen (EBK)</p></li>
+                                    <li><p>Garden / anteil / joint</p></li>
+                                </ul>
+                                <ul>
+                                    <li><p>Floors: parquet</p></li>
+                                    <li><p>Garage: Carport</p></li>
+                                </ul>
+                            </div>
+                            <div class="tags">
+                                <ul>
+                                    <li><a href="">parking space</a></li>
+                                    <li><a href="">balcony</a></li>
+                                    <li><a href="">bathroom with tub</a></li>
+                                    <li><a href="">guest toilet</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="gallery">
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery1.png" alt="">
+                                </div>
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery2.png" alt="">
+                                </div>
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery3.png" alt="">
+                                </div>
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery4.png" alt="">
+                                </div>
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery5.png" alt="">
+                                </div>
+                                <div class="gallery-box map">
+                                    <img src="img/search_result/gallery6.png" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="products closed">
+                    <div class="product-wrapp">
+                        <div class="product-box-lf">
+                            <img src="img/search_result/prod4.png" alt="prod">
+                        </div>
+                        <div class="product-box-rg">
+                            <div class="product-box-wr-full">
+                                <div class="pr-box">
+                                    <img src="/img/home/partners/partner3.png" alt="partner">
+                                </div>
+                            </div>
+                            <div class="product-box-wr">
+                                <div class="pr-box">
+                                    <h2>Modern house in Hamburg, Germany</h2>
+                                </div>
+                                <div class="pr-box rg">
+                                    <button class="price">$ 4587</button>
+                                </div>
+                            </div>
+                            <div class="product-box-wr">
+                                <div class="pr-box">
+                                    <p><img src="img/home/slider/location.svg" alt="location">Lemsahl-Mellingstedt</p>
+                                </div>
+                                <div class="pr-box rg">
+                                    <button class="fav">
+                                        <svg id="like" xmlns="http://www.w3.org/2000/svg" width="18" height="20.101" viewBox="0 0 22.753 20.101">
+                                            <g id="Group_10" data-name="Group 10" transform="translate(0 0)">
+                                                <path id="fav_like" data-name="Path 12" d="M21.093,31.811a5.731,5.731,0,0,0-9.15.658,8.724,8.724,0,0,0-.566.918,8.716,8.716,0,0,0-.566-.918,5.731,5.731,0,0,0-9.15-.658A6.9,6.9,0,0,0,0,36.391a8.446,8.446,0,0,0,2.326,5.542,51.787,51.787,0,0,0,5.822,5.439c.88.75,1.791,1.526,2.76,2.374l.029.026a.667.667,0,0,0,.878,0l.029-.026c.969-.848,1.88-1.624,2.76-2.374a51.779,51.779,0,0,0,5.822-5.439,8.446,8.446,0,0,0,2.326-5.542A6.9,6.9,0,0,0,21.093,31.811ZM13.74,46.358c-.759.647-1.54,1.312-2.364,2.028-.824-.716-1.6-1.382-2.364-2.029-4.624-3.941-7.679-6.544-7.679-9.966a5.566,5.566,0,0,1,1.327-3.7,4.45,4.45,0,0,1,3.384-1.523A4.494,4.494,0,0,1,9.722,33.24a7.9,7.9,0,0,1,1.02,2.029.667.667,0,0,0,1.268,0,7.9,7.9,0,0,1,1.02-2.029,4.4,4.4,0,0,1,7.062-.548,5.566,5.566,0,0,1,1.327,3.7C21.42,39.814,18.365,42.417,13.74,46.358Z" transform="translate(0 -29.836)" fill="#0f3358"/>
+                                            </g>
+                                        </svg>
+                                        Add to Favorites
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div class="product-box-wr last-mrg">
+                                <div class="pr-box">
+                                    <p><img src="img/home/slider/bed.svg" alt="bed">rooms</p>
+                                </div>
+                                <div class="pr-box">
+                                    <p><img src="img/home/slider/house.svg" alt="location">316 m²</p>
+                                </div>
+                                <div class="pr-box rg">
+                                    <button class="preview">Preview</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description-wrapp ">
+                        <div class="desc-box">
+                            <h4>DESCRIPTION</h4>
+                            <p>This spacious, sunlit semi-detached house was built in 2003 in conventional construction
+                                and
+                                is in a very clean condition. The living area of ​​approx. 156 m² is distributed
+                                over a living area, hallway and eat-in kitchen on the ground floor, three living /
+                                sleeping
+                                areas in the first floor. </p>
+
+                        </div>
+                        <div class="desc-box">
+                            <h4>DOMESTIC EQUIPMENTS</h4>
+
+                            <div class="domestic">
+                                <ul>
+                                    <li><p>Ktchen: fitted kitchen (EBK)</p></li>
+                                    <li><p>Garden / anteil / joint</p></li>
+                                </ul>
+                                <ul>
+                                    <li><p>Floors: parquet</p></li>
+                                    <li><p>Garage: Carport</p></li>
+                                </ul>
+                            </div>
+                            <div class="tags">
+                                <ul>
+                                    <li><a href="">parking space</a></li>
+                                    <li><a href="">balcony</a></li>
+                                    <li><a href="">bathroom with tub</a></li>
+                                    <li><a href="">guest toilet</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="gallery">
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery1.png" alt="">
+                                </div>
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery2.png" alt="">
+                                </div>
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery3.png" alt="">
+                                </div>
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery4.png" alt="">
+                                </div>
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery5.png" alt="">
+                                </div>
+                                <div class="gallery-box map">
+                                    <img src="img/search_result/gallery6.png" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="products closed">
+                    <div class="product-wrapp">
+                        <div class="product-box-lf">
+                            <img src="img/search_result/prod5.png" alt="prod">
+                        </div>
+                        <div class="product-box-rg">
+                            <div class="product-box-wr-full">
+                                <div class="pr-box">
+                                    <img src="/img/home/partners/partner3.png" alt="partner">
+                                </div>
+                            </div>
+                            <div class="product-box-wr">
+                                <div class="pr-box">
+                                    <h2>Modern house in Hamburg, Germany</h2>
+                                </div>
+                                <div class="pr-box rg">
+                                    <button class="price">$ 4587</button>
+                                </div>
+                            </div>
+                            <div class="product-box-wr">
+                                <div class="pr-box">
+                                    <p><img src="img/home/slider/location.svg" alt="location">Lemsahl-Mellingstedt</p>
+                                </div>
+                                <div class="pr-box rg">
+                                    <button class="fav">
+                                        <svg id="like" xmlns="http://www.w3.org/2000/svg" width="18" height="20.101" viewBox="0 0 22.753 20.101">
+                                            <g id="Group_10" data-name="Group 10" transform="translate(0 0)">
+                                                <path id="fav_like" data-name="Path 12" d="M21.093,31.811a5.731,5.731,0,0,0-9.15.658,8.724,8.724,0,0,0-.566.918,8.716,8.716,0,0,0-.566-.918,5.731,5.731,0,0,0-9.15-.658A6.9,6.9,0,0,0,0,36.391a8.446,8.446,0,0,0,2.326,5.542,51.787,51.787,0,0,0,5.822,5.439c.88.75,1.791,1.526,2.76,2.374l.029.026a.667.667,0,0,0,.878,0l.029-.026c.969-.848,1.88-1.624,2.76-2.374a51.779,51.779,0,0,0,5.822-5.439,8.446,8.446,0,0,0,2.326-5.542A6.9,6.9,0,0,0,21.093,31.811ZM13.74,46.358c-.759.647-1.54,1.312-2.364,2.028-.824-.716-1.6-1.382-2.364-2.029-4.624-3.941-7.679-6.544-7.679-9.966a5.566,5.566,0,0,1,1.327-3.7,4.45,4.45,0,0,1,3.384-1.523A4.494,4.494,0,0,1,9.722,33.24a7.9,7.9,0,0,1,1.02,2.029.667.667,0,0,0,1.268,0,7.9,7.9,0,0,1,1.02-2.029,4.4,4.4,0,0,1,7.062-.548,5.566,5.566,0,0,1,1.327,3.7C21.42,39.814,18.365,42.417,13.74,46.358Z" transform="translate(0 -29.836)" fill="#0f3358"/>
+                                            </g>
+                                        </svg>
+                                        Add to Favorites
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div class="product-box-wr last-mrg">
+                                <div class="pr-box">
+                                    <p><img src="img/home/slider/bed.svg" alt="bed">rooms</p>
+                                </div>
+                                <div class="pr-box">
+                                    <p><img src="img/home/slider/house.svg" alt="location">316 m²</p>
+                                </div>
+                                <div class="pr-box rg">
+                                    <button class="preview">Preview</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description-wrapp ">
+                        <div class="desc-box">
+                            <h4>DESCRIPTION</h4>
+                            <p>This spacious, sunlit semi-detached house was built in 2003 in conventional construction
+                                and
+                                is in a very clean condition. The living area of ​​approx. 156 m² is distributed
+                                over a living area, hallway and eat-in kitchen on the ground floor, three living /
+                                sleeping
+                                areas in the first floor. </p>
+
+                        </div>
+                        <div class="desc-box">
+                            <h4>DOMESTIC EQUIPMENTS</h4>
+
+                            <div class="domestic">
+                                <ul>
+                                    <li><p>Ktchen: fitted kitchen (EBK)</p></li>
+                                    <li><p>Garden / anteil / joint</p></li>
+                                </ul>
+                                <ul>
+                                    <li><p>Floors: parquet</p></li>
+                                    <li><p>Garage: Carport</p></li>
+                                </ul>
+                            </div>
+                            <div class="tags">
+                                <ul>
+                                    <li><a href="">parking space</a></li>
+                                    <li><a href="">balcony</a></li>
+                                    <li><a href="">bathroom with tub</a></li>
+                                    <li><a href="">guest toilet</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="gallery">
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery1.png" alt="">
+                                </div>
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery2.png" alt="">
+                                </div>
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery3.png" alt="">
+                                </div>
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery4.png" alt="">
+                                </div>
+                                <div class="gallery-box">
+                                    <img src="img/search_result/gallery5.png" alt="">
+                                </div>
+                                <div class="gallery-box map">
+                                    <img src="img/search_result/gallery6.png" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="content">
+                <div class="pagination">
+                    <ul>
+                        <li class="active"><a href="" >1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href=""> <img src="img/search_result/pagination.png" alt=""> </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--footer-->
+    <footer>
+        <div class="content">
+            <div class="footer-wrapp">
+                <div class="footer-item">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="img/header/logo.svg" alt="logo"> Immago
+                        </a>
+                        <p>Copyright 2018 Immago | All rights reserved.</p>
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <ul>
+                        <li><a href="">Company</a></li>
+                        <li><a href=""> Legal information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <ul>
+                        <li><a href="">Privacy policy</a></li>
+                        <li><a href="">Terms and conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <select name="">
+                        <option value="">English</option>
+                        <option value="">English</option>
+                        <option value="">English</option>
+                    </select>
+                </div>
+                <div class="footer-item">
+                    <ul class="social-list">
+                        <li><a href=""><img src="img/footer/social/fb.svg" alt="fb"></a></li>
+                        <li><a href=""><img src="img/footer/social/tw.svg" alt="tw"></a></li>
+                        <li><a href=""><img src="img/footer/social/gogle.svg" alt="gogle"></a></li>
+                        <li><a href=""><img src="img/footer/social/in.svg" alt="in"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</main>
+<script src="js/scripts.min.js"></script>
+</body>
+</html>

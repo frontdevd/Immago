@@ -1,39 +1,36 @@
-
-
-$(function() {
+$(function () {
 
 
     //animation
 
 
-
-	// Custom JS
+    // Custom JS
     $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:28,
-        responsiveClass:true,
-        dots:false,
+        loop: true,
+        margin: 28,
+        responsiveClass: true,
+        dots: false,
         nav: true,
-        navText: ["<img src='img/home/slider/r-arr.svg'>","<img src='img/home/slider/lf-arr.svg'>"],
-        responsive:{
-            0:{
-                items:1,
-                nav:true
+        navText: ["<img src='img/home/slider/r-arr.svg'>", "<img src='img/home/slider/lf-arr.svg'>"],
+        responsive: {
+            0: {
+                items: 1,
+                nav: true
             },
-            480:{
-                items:1,
-                nav:true
+            480: {
+                items: 1,
+                nav: true
             },
-            768:{
-                items:2,
+            768: {
+                items: 2,
                 nav: true,
             },
-            1400:{
+            1400: {
                 items: 3,
-                nav:true,
+                nav: true,
 
             },
-            1499:{
+            1499: {
                 items: 4,
                 nav: true
             }
@@ -41,15 +38,66 @@ $(function() {
     });
 
     // menu toogle in mobile
-    $('.mobile-menu').on('click', function() {
+    $('.mobile-menu').on('click', function () {
         $('.login-box ul').toggle();
-    })
+    });
 
 
 //    user dropdown toggle
-
     $('.user-drop').on('click', function () {
         $('.user-drop-wrapp').toggle()
+    });
+
+    $('.search-box input').on('keyup', function () {
+        console.log(56)
+        $('.search-box input').css('border-bottom-left-radius', 0)
+        $('.search-box input').css('border-bottom-right-radius', 0)
+        $('.search-result-list').show()
+
+        if($(this).val() == '') {
+            $('.search-result-list').hide();
+            $('.search-box input').css('border-bottom-left-radius', '46px')
+            $('.search-box input').css('border-bottom-right-radius', '46px')
+        }
+    });
+
+
+
+    $('.select-list .active').on('click', function () {
+
+        $('.hidden-select').toggle();
+        $('.select-list p').on('click', function(e) {
+            e.preventDefault()
+            var x = $(this).html();
+            var activeSelect = $('p.active').html();
+            $('p.active').html(x);
+            $(this).html(activeSelect);
+        })
+
+    });
+
+    var favClass = 'section.search-result .product-wrapp .product-box-rg .product-box-wr .pr-box button.fav';
+    var imgSrc = "<img src='img/search_result/down-arrow.png' />";
+
+
+    $('.preview').on('click', function() {
+
+        $(this).closest('.products').toggleClass('closed')
+
+        if($(this).closest('.products').hasClass('closed')) {
+
+            $(this).closest('.preview').removeClass('blue');
+            $(this).closest('.preview').html('<button class="preview">Preview</button>');
+
+        }
+        else {
+
+            $(this).closest('.preview').addClass('blue');
+            $(this).closest('.preview').html(imgSrc + 'Close');
+        }
     })
+
+
+
 
 });

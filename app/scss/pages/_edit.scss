@@ -1,0 +1,184 @@
+section.edit {
+  width: 74%;
+  margin: 86px auto;
+
+  @include media-breakpoint-up(md) {
+    width: 100%;
+  }
+  .edit-wrapp {
+
+
+    .edit-title {
+      h1 {
+        font-family: 'OpenSansBold';
+        color: $blueColor;
+        font-size: 30px;
+
+        @include media-breakpoint-up(md) {
+          font-size: 26px;
+        }
+      }
+
+      p {
+        font-family: 'OpenSansRegulyar';
+        font-size: 18px;
+        color: $blueColor;
+      }
+    }
+
+    .edit-img-delete {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin: 80px 0 65px;
+      @include media-breakpoint-up(md) {
+        align-items: center;
+        flex-direction: column;
+      }
+
+
+
+
+      .img-user {
+        position: relative;
+
+        img.edit-user {
+          max-width: 100%;
+          width: 170px;
+        }
+
+        img.upload {
+          width: 60px;
+          position: absolute;
+          bottom: 0px;
+          right: 5px;
+        }
+      }
+    }
+
+    .edit-btn {
+      margin-left: 30px;
+      button {
+        font-family: 'OpenSansSemibold';
+        font-size: 16px;
+        padding: 16px 20px;
+        margin-right: 0;
+        border-radius: 37px;
+        color: #0f3358;
+        transition: all .4s ease-in-out;
+        border: 0;
+        background: #FBFBFB;
+
+        &:hover {
+          border: 1px solid $blueColor;
+          color: #fff;
+          background: $blueColor;
+        }
+      }
+    }
+
+  }
+
+  .edit-personal {
+    h4 {
+      font-family: 'OpenSansBold';
+      color: $redColor;
+      font-size: 25px;
+      margin: 0 0 50px 0;
+
+      @include media-breakpoint-up(md) {
+        font-size: 20px;
+      }
+    }
+
+    .edit-personal-wrapp {
+      display: flex;
+      align-items: center;
+      margin: 0 0 30px 0;
+      justify-content: space-between;
+      @include media-breakpoint-up(md) {
+       flex-direction: column;
+        text-align: center;
+      }
+      .pers-box {
+        label {
+          font-family: 'OpenSansBold';
+          color: $blueColor;
+          font-size: 18px;
+        }
+        input {
+          width: 100%;
+          background: #fbfbfb;
+          border: none;
+          border-radius: 34px;
+          font-size: 18px;
+          color: #959595;
+          padding: 19px 30px;
+          box-sizing: border-box;
+          height: 60px;
+        }
+      }
+      .per-lf {
+        flex-basis: 20%;
+        @include media-breakpoint-up(md) {
+          width: 100%;
+        }
+      }
+      .per-rg {
+        flex-basis: 80%;
+        @include media-breakpoint-up(md) {
+          width: 100%;
+        }
+      }
+    }
+    .change-pasw {
+      margin: 50px 0 100px;
+      a {
+        font-family: OpenSansBold;
+        color: $redColor;
+        font-size: 18px;
+
+      }
+    }
+
+    .delete-account {
+      display: flex;
+      justify-content: space-between;
+      @include media-breakpoint-up(md) {
+        flex-direction: column;
+        text-align: center;
+      }
+      .del-acc-box {
+        @include media-breakpoint-up(md) {
+          margin: 0 0 20px;
+        }
+
+        .del-acc-box a {
+          font-family: 'OpenSansLight';
+          font-size: 18px;
+          color: #0f3358;
+        }
+
+        button {
+          background: $redColor;
+          padding: 6px 22.5px;
+          margin-right: 0;
+          border-radius: 37px;
+          color: #fff;
+          transition: all .4s ease-in-out;
+          border: 0;
+          height: 50px;
+          font-size: 18px;
+
+          &:hover {
+            border: 1px solid $redColor;
+            color: $redColor;
+            background: #fff;
+          }
+        }
+      }
+
+    }
+
+  }
+}
