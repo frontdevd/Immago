@@ -329,8 +329,14 @@ section.discover {
       color: $blueColor;
       font-size: 26px;
       text-align: center;
+      width: 73%;
+      margin: 0 auto;
       @include media-breakpoint-up(sm) {
         font-size: 20px;
+      }
+      @include media-breakpoint-up(md) {
+        width: 100%;
+        margin: 0 auto;
       }
     }
   }
@@ -375,12 +381,13 @@ section.discover {
       }
 
       h4 {
-
+        width: 70%;
         @include media-breakpoint-up(lg) {
           font-size: 32px;
         }
         @include media-breakpoint-up(md) {
           font-size: 24px;
+          width: 100%
         }
       }
 

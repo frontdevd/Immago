@@ -1,7 +1,7 @@
 section.search-result {
   .content-full {
-    padding: 57px 0 33px;
-    box-shadow: 0 4px 2px -2px #0000001f;
+    //padding: 57px 0 33px;
+    //box-shadow: 0 4px 2px -2px #0000001f;
     border-top: 1px solid #DDDDDD;
 
     .search-box {
@@ -38,7 +38,7 @@ section.search-result {
             cursor: pointer;
 
             &:hover {
-              background: #e6443b1f;
+              background: rgba(230, 68, 59, 0.05);
             }
           }
         }
@@ -76,12 +76,18 @@ section.search-result {
           -webkit-border-radius: 46px;
           border-radius: 46px;
           width: 100%;
-          color: $blueColor;
+          color: #0f3358;
           font-family: 'OpenSansSemibold';
           font-size: 20px;
-          -webkit-box-sizing: border-box;
           box-sizing: border-box;
           background: #fbfbfb;
+          outline: 0;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          background: #fbfbfb url(../../img/footer/select.svg) no-repeat right center;
+          background-position-x: 250px;
+
         }
 
         .input-filter {
@@ -187,7 +193,7 @@ section.search-result {
         cursor: pointer;
 
         &:hover {
-          background: rgba(230, 68, 59, 0.11);
+          background: rgba(230, 68, 59, 0.05);
         }
       }
 
@@ -307,11 +313,11 @@ section.search-result {
               font-family: 'OpenSansBold';
               color: $blueColor;
               font-size: 18px;
-
-              img {
+              svg {
                 width: 20px;
-                margin: 0 10px 0 0;
+                margin: 0 2px 0 0;
               }
+
 
               svg#like {
                 position: relative;
@@ -381,6 +387,7 @@ section.search-result {
           font-family: 'OpenSansLight';
           font-size: 20px;
           color: #0f3358;
+          margin-left: 14px;
 
           @include media-breakpoint-up(md) {
             font-size: 18px;
@@ -412,12 +419,15 @@ section.search-result {
           ul {
             li {
               display: inline-block;
+              margin-right: 7px;
+
               @include media-breakpoint-up(md) {
                 margin: 3px 0;
               }
 
 
               a {
+                font-family: 'OpenSansSemibold';
                 background: #ececec;
                 color: #000;
                 padding: 4px 10px;
@@ -503,5 +513,9 @@ section.search-result {
     }
   }
 
+  .search-top {
+    padding: 40px 0;
+    box-shadow: 0 4px 12px -9px #a39e9e;
+  }
 }
 

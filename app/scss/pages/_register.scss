@@ -4,7 +4,7 @@ section.register {
   .register-wrapp {
     display: flex;
     justify-content: space-between;
-
+    padding: 0 0 50px 0;
     @include media-breakpoint-up(md) {
       flex-direction: column;
     }

@@ -143,6 +143,22 @@ section.payment {
 
 
   }
+  .btn-payment {
+    text-align: right;
+
+    button {
+      background: $redColor;
+      padding: 10px 24px;
+      margin-right: 0;
+      border-radius: 37px;
+      color: #fff;
+      transition: all .4s ease-in-out;
+      border: 0;
+      outline: 0;
+      font-size: 20px;
+      font-family: 'OpenSansSemibold';
+    }
+  }
 }
 
 
