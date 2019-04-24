@@ -66,9 +66,8 @@ section.edit {
         border-radius: 37px;
         color: #0f3358;
         transition: all .4s ease-in-out;
-        border: 0;
         background: #FBFBFB;
-
+        border: 1px solid  #FBFBFB;
         &:hover {
           border: 1px solid $blueColor;
           color: #fff;
@@ -166,7 +165,7 @@ section.edit {
           border-radius: 37px;
           color: #fff;
           transition: all .4s ease-in-out;
-          border: 0;
+          border: 1px solid $redColor;
           height: 50px;
           font-size: 18px;
 

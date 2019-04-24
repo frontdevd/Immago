@@ -222,8 +222,9 @@ section.available {
             color: #fff;
             transition: all 0.4s ease-in-out;
             cursor: pointer;
+            border: 1px solid $redColor;
+
             &:hover {
-              border: 1px solid $redColor;
               color: $redColor;
               background: #fff;
             }
@@ -262,12 +263,16 @@ section.available {
       }
 
       button.owl-prev, button.owl-next {
-        background: #D8D8D8 !important;
+        background: #D8D8D8;
         width: 50px;
         height: 50px;
         border-radius: 50% !important;
         cursor: pointer;
+        transition: all 0.3s ease-in-out;
 
+        &:hover {
+          background: $redColor;
+        }
         @include media-breakpoint-up(md) {
           width: 40px;
           height: 40px;

@@ -153,10 +153,17 @@ section.payment {
       border-radius: 37px;
       color: #fff;
       transition: all .4s ease-in-out;
-      border: 0;
+      border: 1px solid $redColor;
       outline: 0;
       font-size: 20px;
       font-family: 'OpenSansSemibold';
+
+      &:hover {
+        border: 1px solid $redColor;
+        color: $redColor;
+        background: #fff;
+      }
+
     }
   }
 }
