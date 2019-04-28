@@ -59,19 +59,18 @@
          }
        }
      }
-  &:before {
-    content: '';
-    background-image: url(../../img/login/corner.png);
-    background-repeat: no-repeat;
-    background-position: top right;
-    display: block;
-    height: 40px;
-    width: 100px;
-    position: absolute;
-    top: -38px;
-    right: 0;
-  }
+    &:before {
+      content: '';
+      background-image: url(../../img/login/corner.png);
+      background-repeat: no-repeat;
+      background-position: top right;
+      display: block;
+      height: 40px;
+      width: 100px;
+      position: absolute;
+      top: -38px;
+      right: 0;
+    }
    }
-
  }
 //}

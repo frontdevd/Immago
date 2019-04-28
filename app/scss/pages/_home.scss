@@ -436,7 +436,7 @@ section.discover {
     position: absolute;
     left: 170px;
     top: 40px;
-    animation: cloud4 10s ease infinite;
+    animation: cloud4 7s ease infinite;
 
     @include media-breakpoint-up(md) {
      display: none;
