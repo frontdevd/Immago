@@ -55,7 +55,7 @@ section.home-background {
 
       .form-group {
         position: relative;
-
+        z-index: 10;
         input {
           border: none;
           padding: 22.5px 34px;
@@ -101,6 +101,34 @@ section.home-background {
             @include media-breakpoint-up(1600) {
               width: 20px;
               height: 20px;
+            }
+          }
+        }
+      }
+
+      .search-result-list {
+        display: none;
+
+        ul {
+          box-sizing: border-box;
+          background: #fbfbfb;
+          padding: 25px 0;
+          position: relative;
+          top: -20px;
+          height: 30vh;
+          overflow: hidden;
+          z-index: 0;
+
+          li {
+            color: $blueColor;
+            font-size: 18px;
+            padding: 10px 26px;
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+              background: rgba(230, 68, 59, 0.05);
             }
           }
         }
@@ -273,6 +301,7 @@ section.available {
         &:hover {
           background: $redColor;
         }
+
         @include media-breakpoint-up(md) {
           width: 40px;
           height: 40px;
@@ -431,7 +460,6 @@ section.discover {
   }
 
 
-
   .cloud4 {
     position: absolute;
     left: 170px;
@@ -439,12 +467,12 @@ section.discover {
     animation: cloud4 7s ease infinite;
 
     @include media-breakpoint-up(md) {
-     display: none;
+      display: none;
     }
 
   }
 
-  @keyframes  cloud4 {
+  @keyframes cloud4 {
     50% {
       left: 100px;
       top: 60px;
@@ -455,11 +483,11 @@ section.discover {
     }
   }
 }
+
 //stroke-dasharray: 1200;
 //stroke-dashoffset: 1200;
 //stroke-width:5;
 //animation:summerbird-s .75s linear forwards .5s;
-
 
 
 section.partners {
@@ -471,6 +499,7 @@ section.partners {
     background-image: unset;
     padding: 70px 0;
   }
+
   h1 {
     color: $blueColor;
     font-size: 40px;

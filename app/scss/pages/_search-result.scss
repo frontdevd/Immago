@@ -28,7 +28,8 @@ section.search-result {
           padding: 25px 0;
           position: relative;
           top: -2px;
-
+          height: 74vh;
+          overflow: hidden;
           li {
             color: $blueColor;
             font-size: 18px;
