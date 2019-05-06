@@ -111,13 +111,15 @@ section.home-background {
 
         ul {
           box-sizing: border-box;
-          background: #fbfbfb;
+          background: #ffffff;
           padding: 25px 0;
           position: relative;
-          top: -20px;
+          top: -2px;
           height: 30vh;
           overflow: hidden;
-          z-index: 0;
+          z-index: 9;
+          box-shadow: 1px 2px 4px 0px #e7e0e0;
+          width: calc(100% - 80px);
 
           li {
             color: $blueColor;
