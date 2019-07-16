@@ -1,12 +1,10 @@
+@import "../globar";
+
 section.search-result {
   .content-full {
-    //padding: 57px 0 33px;
-    //box-shadow: 0 4px 2px -2px #0000001f;
     border-top: 1px solid #DDDDDD;
-
     .search-box {
       position: relative;
-
       input {
         border: none;
         padding: 16px 34px 16px 60px;
@@ -19,6 +17,27 @@ section.search-result {
         background: #FBFBFB;
       }
 
+      button {
+        background: #e6443b;
+        padding: 6px 22.5px;
+        margin-right: 0;
+        border-radius: 37px;
+        color: #fff;
+        transition: all .4s ease-in-out;
+        border: 1px solid #e6443b;
+        position: absolute;
+        top: 4px;
+        right: 7px;
+        width: 166px;
+        font-size: 20px;
+        height: 55.5px;
+
+        img {
+          margin: 0 14px 0 0;
+        }
+
+      }
+
       .search-result-list {
         display: none;
 
@@ -27,9 +46,10 @@ section.search-result {
           background: #fbfbfb;
           padding: 25px 0;
           position: relative;
-          top: -2px;
+          top: -1px;
           height: 74vh;
           overflow: hidden;
+
           li {
             color: $blueColor;
             font-size: 18px;
@@ -44,20 +64,6 @@ section.search-result {
           }
         }
       }
-
-      &:after {
-        content: '';
-        position: absolute;
-        top: 25px;
-        left: 28px;
-        display: block;
-        background-image: url("../../img/search_result/search.png");
-        background-repeat: no-repeat;
-        background-size: 18px;
-        width: 51px;
-        height: 50px;
-
-      }
     }
 
     .filter-wrapp {
@@ -69,26 +75,22 @@ section.search-result {
       }
 
       .filter-box {
-        flex-basis: 22%;
+        flex-basis: 19%;
 
         select {
           border: none;
-          padding: 13px 34px;
-          -webkit-border-radius: 46px;
+          padding: 13px 13px 13px 20px;
           border-radius: 46px;
           width: 100%;
           color: #0f3358;
-          font-family: 'OpenSansSemibold';
+          font-family: OpenSansSemibold;
           font-size: 20px;
           box-sizing: border-box;
           background: #fbfbfb;
           outline: 0;
-          -webkit-appearance: none;
-          -moz-appearance: none;
           appearance: none;
           background: #fbfbfb url(../../img/footer/select.svg) no-repeat right center;
-          background-position-x: 250px;
-
+          background-position-x: 90%;
         }
 
         .input-filter {
@@ -97,16 +99,14 @@ section.search-result {
           @include media-breakpoint-up(md) {
             flex-direction: column;
           }
-
           input {
             border: none;
-            padding: 13px 34px;
+            padding: 13px 13px 13px 20px;
             -webkit-border-radius: 46px;
             border-radius: 46px;
             color: $blueColor;
             font-family: 'OpenSansSemibold';
             font-size: 20px;
-            -webkit-box-sizing: border-box;
             box-sizing: border-box;
             background: #fbfbfb;
             width: 47%;
@@ -116,9 +116,7 @@ section.search-result {
               margin-bottom: 15px;
             }
           }
-
         }
-
 
         p {
           font-family: 'OpenSansBold';
@@ -226,6 +224,10 @@ section.search-result {
 
     .product-wrapp {
       display: flex;
+      @include media-breakpoint-up(1200) {
+        flex-direction: column;
+      }
+
       @include media-breakpoint-up(md) {
         flex-direction: column;
         padding: 14px;
@@ -234,13 +236,13 @@ section.search-result {
       .product-box-lf {
         flex-basis: 30%;
         width: 360px;
-        //height: 290px;
         margin: 0 auto;
 
         @include media-breakpoint-up(sm) {
           width: 100%;
           height: 100%;
         }
+
         img {
           position: relative;
           float: left;
@@ -251,10 +253,13 @@ section.search-result {
       }
 
       .product-box-rg {
-        flex-basis: 70%;
-        padding: 20px 50px;
+        flex-basis: 100%;
+        @include media-breakpoint-up(lg) {
+          flex-direction: column;
+          text-align: center;
+        }
         @include media-breakpoint-up(md) {
-          padding: 10px;
+          padding: 0;
         }
 
         .product-box-wr-full {
@@ -272,92 +277,6 @@ section.search-result {
 
           .pr-box {
             flex-basis: 50%;
-
-            h2 {
-              font-family: 'OpenSansBold';
-              color: $blueColor;
-              font-size: 30px;
-              width: 420px;
-
-              @include media-breakpoint-up(md) {
-                font-size: 20px;
-                text-align: center;
-                width: 100%;
-              }
-            }
-
-            p {
-              font-family: 'OpenSansRegulyar';
-              color: #a7a7a7;
-              margin: 4px 0;
-              font-size: 20px;
-              @include media-breakpoint-up(md) {
-                text-align: center;
-              }
-
-              img {
-                margin: 0 12px 0 0;
-              }
-            }
-
-            button.price {
-              background: $redColor;
-              padding: 14px 22px;
-              margin-right: 0;
-              border-radius: 37px;
-              color: #fff;
-              transition: all .4s ease-in-out;
-              border: 1px solid $redColor;
-              font-size: 18px;
-              width: max-content;
-
-              &:hover {
-                border: 1px solid $redColor;
-                color: $redColor;
-                background: #fff;
-              }
-            }
-
-            button.fav {
-              background: none;
-              border: none;
-              font-family: 'OpenSansBold';
-              color: $blueColor;
-              font-size: 18px;
-              svg {
-                width: 20px;
-                margin: 0 2px 0 0;
-              }
-
-
-              svg#like {
-                position: relative;
-                top: 3px;
-              }
-            }
-
-            button.preview {
-              background: none;
-              border: none;
-              font-family: 'OpenSansBold';
-              color: $redColor;
-              font-size: 18px;
-            }
-
-            button.preview.blue {
-              background: none;
-              border: none;
-              font-family: 'OpenSansBold';
-              color: $blueColor;
-              font-size: 18px;
-
-              img {
-                margin: 5px 9px;
-                width: 13px;
-              }
-            }
-
-
           }
 
           .rg {
@@ -366,23 +285,208 @@ section.search-result {
               text-align: center;
               margin: 20px 0;
             }
-
-
           }
-
-
         }
 
         .last-mrg {
           margin-top: 40px;
         }
-
       }
     }
 
+    .product-wraps {
+      display: flex;
+      justify-content: space-between;
+
+      .prod-item {
+        flex-basis: 30%;
+
+        @include media-breakpoint-up(lg) {
+          flex-basis: 100%;
+          text-align: center;
+          margin: 0 auto;
+        }
+
+        > img {
+          position: relative;
+          float: left;
+          width: 360px;
+          height: 288px;
+          -o-object-fit: cover;
+          object-fit: cover;
+        }
+
+
+        h2 {
+          font-family: 'OpenSansBold';
+          color: $blueColor;
+          font-size: 30px;
+          width: 420px;
+          line-height: 38px;
+          @include media-breakpoint-up(lg) {
+            width: 100%;
+            text-align: center;
+          }
+
+          @include media-breakpoint-up(md) {
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+          }
+        }
+
+        p {
+          font-family: 'OpenSansRegulyar';
+          color: #a7a7a7;
+          margin: 4px 0;
+          font-size: 20px;
+
+          @include media-breakpoint-up(md) {
+            text-align: center;
+          }
+
+          img {
+            margin: 0 12px 0 0;
+            width: 14px;
+          }
+        }
+
+        p.light {
+          margin: 20px 0 0 0 !important;
+        }
+
+        button.price {
+          background: $redColor;
+          padding: 7px 26px;
+          margin-right: 0;
+          border-radius: 37px;
+          color: #fff;
+          transition: all .4s ease-in-out;
+          border: 1px solid $redColor;
+          font-size: 18px;
+          width: max-content;
+
+          &:hover {
+            border: 1px solid $redColor;
+            color: $redColor;
+            background: #fff;
+          }
+        }
+
+        button.fav {
+          background: none;
+          border: none;
+          font-family: 'OpenSansBold';
+          color: $blueColor;
+          font-size: 18px;
+
+          svg {
+            width: 20px;
+            margin: 0 2px 0 0;
+          }
+          svg#like {
+            position: relative;
+            top: 3px;
+          }
+        }
+
+        .preview-box {
+          button.preview {
+            background: none;
+            border: none;
+            font-family: 'OpenSansBold';
+            color: $redColor;
+            font-size: 18px;
+          }
+        }
+
+        .share {
+          margin-bottom: 20px;
+        }
+
+        button.preview.blue {
+          background: none;
+          border: none;
+          font-family: 'OpenSansBold';
+          color: $blueColor;
+          font-size: 18px;
+
+          img {
+            margin: 5px 9px;
+            width: 13px;
+          }
+        }
+
+        ul {
+          display: flex;
+          justify-content: space-between;
+          margin: 40px 0 0 0;
+        }
+      }
+
+      .pad-30 {
+        padding: 30px;
+      }
+
+      .border-linear {
+        border-left: 1px solid #071f370d;
+        text-align: center;
+        align-items: center;
+        display: block;
+        padding-top: 50px;
+
+        @include media-breakpoint-up(lg) {
+          padding-top: 0;
+          border: 0;
+        }
+
+        .website-box.mrg {
+          margin: 36px 0 0 0;
+        }
+
+        .website-box {
+          margin-bottom: 24px;
+
+          a {
+            font-family: OpenSansBold;
+            color: #0f3358;
+            font-size: 16px;
+          }
+
+          p {
+            font-family: OpenSansBold;
+            color: #0f3358;
+            font-size: 16px;
+          }
+
+        }
+
+        button {
+          font-family: OpenSansBold;
+          color: #0f3358;
+          font-size: 16px;
+          background: none;
+          border: 0;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: $redColor;
+          }
+        }
+      }
+
+      .left-text {
+        text-align: right;
+        padding: 20px;
+        @include media-breakpoint-up(lg) {
+          text-align: center;
+        }
+      }
+    }
+
+
     .description-wrapp {
       padding: 40px 24px;
-      //display: none;
 
       .desc-box {
         margin-bottom: 50px;
@@ -477,8 +581,6 @@ section.search-result {
               height: 100%;
             }
           }
-
-
         }
 
         .map {
@@ -498,10 +600,12 @@ section.search-result {
     @include media-breakpoint-up(md) {
       text-align: center;
     }
+
     ul {
       li {
         display: inline-block;
         margin: 0 10px;
+
         a {
           font-family: 'OpenSansBold';
           color: #575757;
@@ -530,3 +634,84 @@ section.search-result {
   }
 }
 
+ul.tabs-nav {
+  display: flex;
+  margin: 50px 0 20px 20px;
+
+  li {
+    a {
+      font-size: 20px;
+      font-family: 'OpenSansBold';
+      margin-right: 50px;
+      color: #AAAAAA;
+    }
+  }
+
+  li.tab-active {
+    a {
+      color: $blueColor;
+    }
+  }
+
+}
+
+.nav-t {
+  display: none;
+}
+
+.deals-content {
+  padding: 0 25px 50px;
+
+  .deals-wrapp {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid rgba(112, 112, 112, 0.09);
+    padding: 30px;
+    box-sizing: border-box;
+    align-items: center;
+    @include media-breakpoint-up(lg) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .deals-box.frt {
+      flex-basis: 15%;
+    }
+
+    .deals-box.sec {
+      flex-basis: 70%;
+
+      h2 {
+        font-family: OpenSansBold;
+        color: #0f3358;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      p.light {
+        font-family: OpenSansRegulyar;
+        color: #a7a7a7;
+        margin: 4px 0;
+        font-size: 18px;
+
+        img {
+          margin: 0 12px 0 0;
+          width: 14px;
+        }
+      }
+    }
+
+    .deals-box.thir {
+      flex-basis: 15%;
+
+      p {
+        font-family: OpenSansBold;
+        color: #0f3358;
+        font-size: 20px;
+        text-align: right;
+      }
+    }
+  }
+}

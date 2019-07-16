@@ -85,7 +85,10 @@ b, strong {
   width: 86%;
   margin: 0 auto;
   box-sizing: border-box;
-
+  @include media-breakpoint-down(lg) {
+    width: 96%;
+    padding: 0 20px;
+  }
   @include media-breakpoint-up(md) {
     width: 100%;
     padding: 0 20px;
